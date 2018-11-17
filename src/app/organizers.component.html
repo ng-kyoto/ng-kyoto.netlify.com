@@ -1,0 +1,14 @@
+<div class="container-fluid">
+  <row>
+    <bcol xs="12">
+      <h1>Organizers</h1>
+      <organizer
+        *ngFor="let organizer of organizers"
+        [organizer]="organizer"
+        [posts]="angularPosts"
+      >
+      </organizer>
+    </bcol>
+  </row>
+</div>
+
