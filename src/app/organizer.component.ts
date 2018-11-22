@@ -1,23 +1,29 @@
 'use strict';
 
-import {Component, Input} from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'organizer',
   templateUrl: './organizer.component.html',
 })
 export class OrganizerComponent {
-  @Input('organizer') set organizer(v: any) {
+  @Input('organizer')
+  set organizer(v: any) {
     this._organizer = v;
   }
-  @Input('posts') set allPosts(allPosts: any) {
+  @Input('posts')
+  set allPosts(allPosts: any) {
     if (allPosts) {
-      allPosts.forEach(posts => {
-        if (!posts) { return; }
-        if (posts[0].user.id !== this.organizer.id) { return; }
+      allPosts.forEach((posts) => {
+        if (!posts) {
+          return;
+        }
+        if (posts[0].user.id !== this.organizer.id) {
+          return;
+        }
 
         this.posts = posts;
-        this.twitterName = posts[0].user.twitter_screen_name
+        this.twitterName = posts[0].user.twitter_screen_name;
       });
     }
   }
@@ -35,7 +41,7 @@ export class OrganizerComponent {
 
   get organizerHead(): string {
     const org = this.organizer;
-    return (org.realName) ? `${org.realName} (${org.id})` : org.id;
+    return org.realName ? `${org.realName} (${org.id})` : org.id;
   }
 
   get organizerAvatar(): string {
