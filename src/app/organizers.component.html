@@ -2,13 +2,11 @@
   <row>
     <bcol xs="12">
       <h1>Organizers</h1>
-      <organizer
-        *ngFor="let organizer of organizers"
-        [organizer]="organizer"
-        [posts]="angularPosts"
-      >
-      </organizer>
+      <row>
+        <bcol all="10 10 10 10" allOffset="1 1 1 1">
+          <row><organizer *ngFor="let organizer of organizers" [organizer]="organizer"></organizer></row>
+        </bcol>
+      </row>
     </bcol>
   </row>
 </div>
-

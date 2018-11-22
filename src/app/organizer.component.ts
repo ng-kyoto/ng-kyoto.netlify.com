@@ -1,47 +1,31 @@
 'use strict';
 
 import { Component, Input } from '@angular/core';
+import { IOrganizer } from './organizers.component';
 
 @Component({
   selector: 'organizer',
   templateUrl: './organizer.component.html',
 })
 export class OrganizerComponent {
+  private _organizer: IOrganizer;
+
   @Input('organizer')
-  set organizer(v: any) {
+  set organizer(v: IOrganizer) {
+    console.log(v);
     this._organizer = v;
   }
-  @Input('posts')
-  set allPosts(allPosts: any) {
-    if (allPosts) {
-      allPosts.forEach((posts) => {
-        if (!posts) {
-          return;
-        }
-        if (posts[0].user.id !== this.organizer.id) {
-          return;
-        }
-
-        this.posts = posts;
-        this.twitterName = posts[0].user.twitter_screen_name;
-      });
-    }
+  get organizer(): IOrganizer {
+    return this._organizer;
   }
-  _organizer: any;
-  posts: any[];
-  twitterName: string;
 
   constructor() {
     // noop
   }
 
-  get organizer(): any {
-    return this._organizer;
-  }
-
   get organizerHead(): string {
     const org = this.organizer;
-    return org.realName ? `${org.realName} (${org.id})` : org.id;
+    return `(@${org.id})`;
   }
 
   get organizerAvatar(): string {

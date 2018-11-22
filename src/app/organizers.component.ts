@@ -7,10 +7,15 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './organizers.component.html',
 })
 export class OrganizersComponent {
-  organizers = [
-    { id: 'armorik83', realName: '奥野 賢太郎', description: 'ng-kyoto代表 Angular芸人' },
-    { id: '_likr', realName: '尾上 洋介', description: 'やせいのプログラマー' },
-    { id: 'shinsukeimai', realName: '今井 晨介', description: '体育会系プログラマ' },
+  organizers: IOrganizer[] = [
+    { id: 'zilch8', url: 'https://twitter.com/zilch8', name: 'sayanaka', description: '代表' },
+    { id: 'N372Drag', url: 'https://twitter.com/N372Drag', name: 'ニシえもん' },
+    {
+      id: 'okunokentaro',
+      url: 'https://github.com/okunokentaro',
+      name: '奥野 賢太郎',
+    },
+    { id: '_likr', url: 'https://vdslab.jp/', name: '尾上 洋介' },
   ];
   angularPosts: any;
 
@@ -55,4 +60,11 @@ export class OrganizersComponent {
     // The return type must be an Array<Array<QiitaPost>>
     return result;
   }
+}
+
+export interface IOrganizer {
+  id: string;
+  url: string;
+  name?: string;
+  description?: string;
 }
