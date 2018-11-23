@@ -1,5 +1,4 @@
-import {Directive, ViewContainerRef} from '@angular/core';
-
+import { Directive, ViewContainerRef } from '@angular/core';
 
 const rowTag = 'row';
 const colTag = 'bcol'; // <col> overlap with the existing elements
@@ -18,7 +17,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 });
 
 @Directive({
-  selector: rowTag
+  selector: rowTag,
 })
 export class Row {
   constructor(viewContainer: ViewContainerRef) {
@@ -49,8 +48,8 @@ export class Row {
     'all',
     'allOffset',
     'allPush',
-    'allPull'
-  ]
+    'allPull',
+  ],
 })
 export class Col {
   constructor(public viewContainer: ViewContainerRef) {
@@ -61,25 +60,105 @@ export class Col {
     (<any>this.viewContainer).element.nativeElement.classList.add(cls);
   }
 
-  set xs(n) { if (+n === 0) { return; } this.addClass(`col-xs-${n}`); }
-  set sm(n) { if (+n === 0) { return; } this.addClass(`col-sm-${n}`); }
-  set md(n) { if (+n === 0) { return; } this.addClass(`col-md-${n}`); }
-  set lg(n) { if (+n === 0) { return; } this.addClass(`col-lg-${n}`); }
+  set xs(n) {
+    if (+n === 0) {
+      return;
+    }
+    this.addClass(`col-xs-${n}`);
+  }
+  set sm(n) {
+    if (+n === 0) {
+      return;
+    }
+    this.addClass(`col-sm-${n}`);
+  }
+  set md(n) {
+    if (+n === 0) {
+      return;
+    }
+    this.addClass(`col-md-${n}`);
+  }
+  set lg(n) {
+    if (+n === 0) {
+      return;
+    }
+    this.addClass(`col-lg-${n}`);
+  }
 
-  set xsOffset(n) { if (+n === 0) { return; } this.addClass(`col-xs-offset-${n}`); }
-  set smOffset(n) { if (+n === 0) { return; } this.addClass(`col-sm-offset-${n}`); }
-  set mdOffset(n) { if (+n === 0) { return; } this.addClass(`col-md-offset-${n}`); }
-  set lgOffset(n) { if (+n === 0) { return; } this.addClass(`col-lg-offset-${n}`); }
+  set xsOffset(n) {
+    if (+n === 0) {
+      return;
+    }
+    this.addClass(`col-xs-offset-${n}`);
+  }
+  set smOffset(n) {
+    if (+n === 0) {
+      return;
+    }
+    this.addClass(`col-sm-offset-${n}`);
+  }
+  set mdOffset(n) {
+    if (+n === 0) {
+      return;
+    }
+    this.addClass(`col-md-offset-${n}`);
+  }
+  set lgOffset(n) {
+    if (+n === 0) {
+      return;
+    }
+    this.addClass(`col-lg-offset-${n}`);
+  }
 
-  set xsPush(n) { if (+n === 0) { return; } this.addClass(`col-xs-push-${n}`); }
-  set smPush(n) { if (+n === 0) { return; } this.addClass(`col-sm-push-${n}`); }
-  set mdPush(n) { if (+n === 0) { return; } this.addClass(`col-md-push-${n}`); }
-  set lgPush(n) { if (+n === 0) { return; } this.addClass(`col-lg-push-${n}`); }
+  set xsPush(n) {
+    if (+n === 0) {
+      return;
+    }
+    this.addClass(`col-xs-push-${n}`);
+  }
+  set smPush(n) {
+    if (+n === 0) {
+      return;
+    }
+    this.addClass(`col-sm-push-${n}`);
+  }
+  set mdPush(n) {
+    if (+n === 0) {
+      return;
+    }
+    this.addClass(`col-md-push-${n}`);
+  }
+  set lgPush(n) {
+    if (+n === 0) {
+      return;
+    }
+    this.addClass(`col-lg-push-${n}`);
+  }
 
-  set xsPull(n) { if (+n === 0) { return; } this.addClass(`col-xs-pull-${n}`); }
-  set smPull(n) { if (+n === 0) { return; } this.addClass(`col-sm-pull-${n}`); }
-  set mdPull(n) { if (+n === 0) { return; } this.addClass(`col-md-pull-${n}`); }
-  set lgPull(n) { if (+n === 0) { return; } this.addClass(`col-lg-pull-${n}`); }
+  set xsPull(n) {
+    if (+n === 0) {
+      return;
+    }
+    this.addClass(`col-xs-pull-${n}`);
+  }
+  set smPull(n) {
+    if (+n === 0) {
+      return;
+    }
+    this.addClass(`col-sm-pull-${n}`);
+  }
+  set mdPull(n) {
+    if (+n === 0) {
+      return;
+    }
+    this.addClass(`col-md-pull-${n}`);
+  }
+  set lgPull(n) {
+    if (+n === 0) {
+      return;
+    }
+    this.addClass(`col-lg-pull-${n}`);
+  }
 
   set all(allval: string) {
     const vals = allval.split(' ');
