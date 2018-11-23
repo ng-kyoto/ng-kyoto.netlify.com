@@ -8,7 +8,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class OrganizersComponent {
   organizers: IOrganizer[] = [
-    { id: 'zilch8', url: 'https://twitter.com/zilch8', name: 'sayanaka', description: '代表' },
+    { id: 'zilch8', url: 'https://twitter.com/zilch8', name: 'sayanaka' },
     { id: 'N372Drag', url: 'https://twitter.com/N372Drag', name: 'ニシえもん' },
     {
       id: 'okunokentaro',
@@ -66,5 +66,4 @@ export interface IOrganizer {
   id: string;
   url: string;
   name?: string;
-  description?: string;
 }
