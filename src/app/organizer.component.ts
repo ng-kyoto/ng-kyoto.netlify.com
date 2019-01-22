@@ -12,7 +12,6 @@ export class OrganizerComponent {
 
   @Input('organizer')
   set organizer(v: IOrganizer) {
-    console.log(v);
     this._organizer = v;
   }
   get organizer(): IOrganizer {
