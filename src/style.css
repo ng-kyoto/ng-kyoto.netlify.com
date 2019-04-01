@@ -1,21 +1,27 @@
-@import "app/common-styles/bootstrap.min.css";
+@import 'app/common-styles/bootstrap.min.css';
 @font-face {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 100;
-  src: local('Roboto Thin'), local('Roboto-Thin'), url(http://themes.googleusercontent.com/static/fonts/roboto/v10/vzIUHo9z-oJ4WgkpPOtg1_esZW2xOQ-xsNqO47m55DA.woff) format('woff');
+  src: local('Roboto Thin'), local('Roboto-Thin'),
+    url(https://themes.googleusercontent.com/static/fonts/roboto/v10/vzIUHo9z-oJ4WgkpPOtg1_esZW2xOQ-xsNqO47m55DA.woff)
+      format('woff');
 }
 @font-face {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 300;
-  src: local('Roboto Light'), local('Roboto-Light'), url(http://themes.googleusercontent.com/static/fonts/roboto/v10/Hgo13k-tfSpn0qi1SFdUfT8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+  src: local('Roboto Light'), local('Roboto-Light'),
+    url(https://themes.googleusercontent.com/static/fonts/roboto/v10/Hgo13k-tfSpn0qi1SFdUfT8E0i7KZn-EPnyo3HZu7kw.woff)
+      format('woff');
 }
 @font-face {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 500;
-  src: local('Roboto Medium'), local('Roboto-Medium'), url(http://themes.googleusercontent.com/static/fonts/roboto/v10/RxZJdnzeo3R5zSexge8UUT8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+  src: local('Roboto Medium'), local('Roboto-Medium'),
+    url(https://themes.googleusercontent.com/static/fonts/roboto/v10/RxZJdnzeo3R5zSexge8UUT8E0i7KZn-EPnyo3HZu7kw.woff)
+      format('woff');
 }
 .button-box-shadow {
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
@@ -32,7 +38,7 @@ html {
 body {
   font-size: 16px;
   background-color: #253238;
-  font-family: "Roboto", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-family: 'Roboto', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
 }
 a,
 a:hover,
@@ -58,8 +64,8 @@ a:focus {
 .section h1 {
   font-size: 4rem;
   font-weight: lighter;
-  line-height: .8em;
-  margin: 0 0 .8rem;
+  line-height: 0.8em;
+  margin: 0 0 0.8rem;
 }
 ng-kyoto-header {
   display: block;
@@ -108,13 +114,13 @@ ng-kyoto-header h1 {
   background-color: #992c7c;
 }
 #hero {
-  background: url("assets/kyoto-paper.png") bottom center no-repeat;
+  background: url('assets/kyoto-paper.png') bottom center no-repeat;
   background-color: #d9e0bf;
   background-size: 100% auto;
   height: 480px;
 }
 #hero h2 {
-  background: url("assets/ng-kyoto-hero-logo.png") top center no-repeat;
+  background: url('assets/ng-kyoto-hero-logo.png') top center no-repeat;
   text-align: center;
   font-weight: normal;
   color: #223606;
@@ -125,7 +131,7 @@ ng-kyoto-header h1 {
 }
 @media only screen and (max-width: 767px) {
   #hero h2 {
-    font-size: 1.0rem;
+    font-size: 1rem;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -140,7 +146,7 @@ ng-kyoto-header h1 {
 }
 @media only screen and (min-width: 768px) {
   #hero h2 {
-    line-height: 2.0rem;
+    line-height: 2rem;
   }
 }
 #hero .apply {
@@ -163,7 +169,7 @@ ng-kyoto-header h1 {
   #hero .apply {
     margin-left: 1em;
     margin-right: 1em;
-    font-size: .9rem;
+    font-size: 0.9rem;
   }
 }
 #hero .apply:hover {
@@ -181,7 +187,7 @@ about p {
 }
 @media only screen and (min-width: 768px) {
   about .short {
-    letter-spacing: .15em;
+    letter-spacing: 0.15em;
   }
 }
 organizers {
@@ -196,11 +202,11 @@ organizer h2 {
 }
 organizer a {
   transition-property: color;
-  transition-duration: .2s;
+  transition-duration: 0.2s;
   transition-timing-function: linear;
 }
 organizer a:hover {
-  transition-duration: .05s;
+  transition-duration: 0.05s;
 }
 organizer .organizer-card {
   background: #f5f8f8;
@@ -230,12 +236,12 @@ organizer .avatar {
   background: none;
   border-radius: 6px;
   transition-property: background-color;
-  transition-duration: .2s;
+  transition-duration: 0.2s;
   transition-timing-function: linear;
 }
 organizer .avatar:hover {
   background: #dbdede;
-  transition-duration: .05s;
+  transition-duration: 0.05s;
 }
 organizer .avatar img {
   width: 100%;
@@ -243,7 +249,7 @@ organizer .avatar img {
   border-radius: 4px;
 }
 organizer .qiita-body {
-  font-size: .8rem;
+  font-size: 0.8rem;
   color: #97aaa7;
 }
 @media only screen and (min-width: 1129px) {
@@ -264,11 +270,11 @@ organizer .qiita-body {
 organizer li {
   list-style: none;
   text-align: left;
-  margin: 0 0 .5em;
+  margin: 0 0 0.5em;
 }
 @media only screen and (min-width: 768px) {
   organizer li {
-    margin: 0 0 2.0em;
+    margin: 0 0 2em;
   }
 }
 @media only screen and (max-width: 767px) {
